@@ -38,7 +38,7 @@ namespace filesystem
 		fileinfo();
 #ifdef NANA_WINDOWS
 		fileinfo(const WIN32_FIND_DATA& wfd);
-#elif NANA_LINUX
+#elif defined(NANA_LINUX)
 		fileinfo(const nana::string& filename, const struct stat &);
 #endif
 		nana::string name;
